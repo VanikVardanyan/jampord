@@ -12,7 +12,7 @@ body {
 }
 
 
-@font-face {
+/* @font-face {
   font-family: 'Bainsley';
   src: url('@/assets/fonts/Bainsley/Bainsley-Regular.ttf') format('truetype');
   font-weight: 400;
@@ -24,4 +24,4 @@ body {
   src: url('@/assets/fonts/Bainsley/Bainsley-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
-}
+} */
