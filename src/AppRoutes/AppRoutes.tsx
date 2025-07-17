@@ -3,43 +3,44 @@ import { lazily } from "@/utils/modules";
 import { ROUTES } from "@/routes";
 import { AppLayout } from "../components/layout/AppLayout";
 import { AuthProvider } from "./AuthContext";
-import { PrivateRoute } from "./components/PrivateRoute";
-import { LogoutRoute } from "./components/LogoutRoute";
-import { AuthRoute } from "./components/AuthRoute";
-import { EditTour } from "../pages/edit-tour";
+// import { PrivateRoute } from "./components/PrivateRoute";
+// import { LogoutRoute } from "./components/LogoutRoute";
+// import { AuthRoute } from "./components/AuthRoute";
+// import { EditTour } from "../pages/edit-tour";
 
 const { HomePage } = lazily(() => import("@/pages/main"));
-const { RegisterPage } = lazily(() => import("@/pages/register"));
-const { ProfilePage } = lazily(() => import("@/pages/profile"));
-const { CreateTour } = lazily(() => import("@/pages/create-tour"));
-const { TourDetailsPage } = lazily(() => import("@/pages/tour"));
-const { CreateProfile } = lazily(() => import("@/pages/create-profile"));
-const { EditProfile } = lazily(() => import("@/pages/edit-profile"));
-const { LogoutPage } = lazily(() => import("@/pages/logout"));
-const { LoginPage } = lazily(() => import("@/pages/login"));
-const { ForgotPasswordPage } = lazily(() => import("@/pages/forgot-password"));
-const { AgencyPage } = lazily(() => import("@/pages/agency"));
-const { CreateEntertainmentTourRequestPage } = lazily(() => import("@/pages/create-request-activity"));
-const { CreateClassicTourRequestPage } = lazily(() => import("@/pages/create-request-classic"));
-const { TourRequestPage } = lazily(() => import("@/pages/tour-request"));
-const { EditEntertainmentTourRequestPage } = lazily(() => import("@/pages/edit-request-activity"));
-const { EditClassicTourRequestPage } = lazily(() => import("@/pages/edit-request-classic"));
+// const { RegisterPage } = lazily(() => import("@/pages/register"));
+// const { ProfilePage } = lazily(() => import("@/pages/profile"));
+// const { CreateTour } = lazily(() => import("@/pages/create-tour"));
+// const { TourDetailsPage } = lazily(() => import("@/pages/tour"));
+// const { CreateProfile } = lazily(() => import("@/pages/create-profile"));
+// const { EditProfile } = lazily(() => import("@/pages/edit-profile"));
+// const { LogoutPage } = lazily(() => import("@/pages/logout"));
+// const { LoginPage } = lazily(() => import("@/pages/login"));
+// const { ForgotPasswordPage } = lazily(() => import("@/pages/forgot-password"));
+// const { AgencyPage } = lazily(() => import("@/pages/agency"));
+// const { CreateEntertainmentTourRequestPage } = lazily(() => import("@/pages/create-request-activity"));
+// const { CreateClassicTourRequestPage } = lazily(() => import("@/pages/create-request-classic"));
+// const { TourRequestPage } = lazily(() => import("@/pages/tour-request"));
+// const { EditEntertainmentTourRequestPage } = lazily(() => import("@/pages/edit-request-activity"));
+// const { EditClassicTourRequestPage } = lazily(() => import("@/pages/edit-request-classic"));
 const { ToursPage } = lazily(() => import("@/pages/tours"));
-const { RequestsPage } = lazily(() => import("@/pages/requests"));
+// const { RequestsPage } = lazily(() => import("@/pages/requests"));
 
 export const AppRoutes = () => {
   return (
     <AuthProvider>
       <Routes>
-        <Route path={ROUTES.HomePage} element={<AppLayout />}>
+        {/* <Route path={ROUTES.HomePage} element={<AppLayout />}> */}
+        <Route path={ROUTES.HomePage}>
           <Route>
             <Route index element={<HomePage />} />
-            <Route path={`${ROUTES.tour}/:tourId`} element={<TourDetailsPage />} />
-            <Route path={`${ROUTES.agency}/:id`} element={<AgencyPage />} />
+            {/* <Route path={`${ROUTES.tour}/:tourId`} element={<TourDetailsPage />} /> */}
+            {/* <Route path={`${ROUTES.agency}/:id`} element={<AgencyPage />} /> */}
             <Route path={ROUTES.tours} element={<ToursPage />} />
           </Route>
 
-          <Route element={<PrivateRoute requireProfile={false} />}>
+          {/* <Route element={<PrivateRoute requireProfile={false} />}>
             <Route path={ROUTES.createProfile} element={<CreateProfile />} />
           </Route>
 
@@ -66,7 +67,7 @@ export const AppRoutes = () => {
               <Route path={ROUTES.login} element={<LoginPage />} />
               <Route path={ROUTES.forgotPassword} element={<ForgotPasswordPage />} />
             </Route>
-          </Route>
+          </Route> */}
         </Route>
       </Routes>
     </AuthProvider>
