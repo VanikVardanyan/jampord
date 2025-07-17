@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import { lazily } from "@/utils/modules";
 import { ROUTES } from "@/routes";
-import { AppLayout } from "../components/layout/AppLayout";
+// import { AppLayout } from "../components/layout/AppLayout";
 import { AuthProvider } from "./AuthContext";
 // import { PrivateRoute } from "./components/PrivateRoute";
 // import { LogoutRoute } from "./components/LogoutRoute";
